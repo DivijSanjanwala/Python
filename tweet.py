@@ -1,5 +1,18 @@
-"""Assignment 1.
-"""
+'''For reference, 
+
+tweet: A message posted on Twitter. For our purposes, the message text is between 1 and MAX_TWEET_LENGTH 
+characters long (inclusive). MAX_TWEET_LENGTH is a constant.
+
+tweet word: A word in a tweet. For our purposes, a tweet word contains only alphanumeric characters and 
+    underscores. For example, pink_elephant is a tweet word, 
+    while bits&pieces is not (In fact, bits&pieces is two tweet words, bits and pieces, with an ampersand (&) between them.)
+    
+hashtag: A word in a tweet that begins with the hash symbol. Twitter uses the number sign (#) 
+    as the hash symbol. For our assignment, we'll use the constant HASHTAG_SYMBOL to represent the hash symbol. 
+    Hashtags are used to label important words or terms in a tweet. 
+    A valid hashtag has the hash symbol as its first character and the rest of the characters form a tweet word. 
+    In other words, a hashtag begins with the hash symbol, and contains all alphanumeric characters and underscores 
+    up to (but not including) the first non-alphanumeric character (such as space, punctuation, etc.) or the end of the tweet. '''
 
 import math
 
@@ -149,9 +162,15 @@ def num_tweets_required(valid_tweet: str) -> int:
     return math.ceil(len(valid_tweet) / MAX_TWEET_LENGTH)
 
 def get_nth_tweet(messege: str, n: int) -> str:
-    ''' If the message contains too many characters, it would need to be split up into a sequence of tweets. All of the tweets in the sequence, except possibly the last tweet, would be of length MAX_TWEET_LENGTH'''
-    
-        
+    ''' If the message contains too many characters, it would need to be split up into a sequence of tweets. 
+    All of the tweets in the sequence, except possibly the last tweet, would be of length MAX_TWEET_LENGTH
+    The function returns the nth tweet based on the 
+    get_nth_tweet(5 * 'DivijSanjanwala', 2)
+    'SanjanwalaDivijSanjanwala'
+    get_nth_tweet('DivijSanjanwala, 1)
+    ''
+    '''
+ 
     if n == num_tweets_required(messege): 
         return messege[(n - 1) * MAX_TWEET_LENGTH: len(messege)]
    
