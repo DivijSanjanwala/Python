@@ -155,14 +155,5 @@ def get_nth_tweet(messege: str, n: int) -> str:
     if n == num_tweets_required(messege): 
         return messege[(n - 1) * MAX_TWEET_LENGTH: len(messege)]
    
-    # n = num_tweets_required(messege)
-     
-     #x = len(messege) - n * MAX_TWEET_LENGTH
-         
-     #if x > 0:
-       #  return messege[n * MAX_TWEET_LENGTH: x + n * MAX_TWEET_LENGTH]
-    # elif x < 0:
-        # return messege        
-        
-       # return messege[MAX_TWEET_LENGTH: n * MAX_TWEET_LENGTH]
+   
     
