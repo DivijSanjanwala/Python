@@ -5,7 +5,7 @@ def area_triangles(dimension_list: List[list]) -> List[int]:
     Here, 
     index = 0 refers to the length of  left side of the triangle
     index = 1 refer to the length of the base of the triangle
-    index = 2 refers to the length of the right side of the triangle.
+    index = 2 refers to the length of the right side of the triangle.crcr
     
     area_triangles([10, 20, 30], [40, 50, 60], [60, 70, 80])
     [0.0, 780.6247497997997, 1705.6890103415687]
